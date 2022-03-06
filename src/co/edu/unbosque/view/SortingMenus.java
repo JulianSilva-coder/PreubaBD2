@@ -24,6 +24,7 @@ public class SortingMenus {
                         6. Return
                         7. Exit
                         """);
+
                 option = scan.nextInt();
                 switch (option) {
                     case 1 -> bubbleSortCase(4000);
