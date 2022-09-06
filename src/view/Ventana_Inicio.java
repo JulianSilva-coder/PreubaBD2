@@ -24,7 +24,7 @@ public class Ventana_Inicio extends JPanel {
         foto.setBounds(700, 180, 200,200);
         add(foto);
 
-        etiqueta1 = new JLabel("Ingresa Tu cuenta");
+        etiqueta1 = new JLabel("Ingresa tu nombre completo");
         etiqueta1.setBounds(80,50,500,100);
         etiqueta1.setFont(new Font("Arial", Font.BOLD, 25));
         add(etiqueta1);
@@ -34,7 +34,7 @@ public class Ventana_Inicio extends JPanel {
         barra1.setFont((new Font("Arial", Font.BOLD, 25)));
         add(barra1);
 
-        etiqueta2 = new JLabel("Ingresa Tu contraseña");
+        etiqueta2 = new JLabel("Ingresa ID asociado");
         etiqueta2.setBounds(80,220,500,100);
         etiqueta2.setFont(new Font("Arial", Font.BOLD, 25));
         add(etiqueta2);
@@ -51,18 +51,6 @@ public class Ventana_Inicio extends JPanel {
         boton1.setBackground(Color.WHITE);
         add(boton1);
 
-        boton2 = new JButton("Crear Cuenta");
-        boton2.setActionCommand("CrearCuenta");
-        boton2.setBounds(450, 430, 250,80);
-        boton2.setFont((new Font("Arial", Font.BOLD, 15)));
-        boton2.setBackground(Color.WHITE);
-        add(boton2);
-
-        etiqueta3 = new JLabel("Si no tienes cuenta puedes crear Una");
-        etiqueta3.setBounds(80,500,500,100);
-        etiqueta3.setFont(new Font("Arial", Font.BOLD, 25));
-        add(etiqueta3);
-
         ImageIcon imagen1 = new ImageIcon("fondo.jpg");
         ImageIcon icon1 = new ImageIcon(imagen1.getImage().getScaledInstance(1000,700, Image.SCALE_DEFAULT));
         fondo = new JLabel(icon1);
@@ -78,11 +66,4 @@ public class Ventana_Inicio extends JPanel {
         this.boton1 = boton1;
     }
 
-    public JButton getBoton2() {
-        return boton2;
-    }
-
-    public void setBoton2(JButton boton2) {
-        this.boton2 = boton2;
-    }
 }

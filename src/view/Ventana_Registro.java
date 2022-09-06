@@ -1,53 +1,65 @@
 package view;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
 public class Ventana_Registro extends JPanel{
 
     private JLabel etiqueta1, etiqueta2, fondo;
-    private JTextField barra1, barra2;
+    private JComboBox barra1;
     private JButton boton1, boton2;
+
+    private DefaultTableModel model;
+    private JTable tabla;
+
 
     public Ventana_Registro(){
         setSize(1000, 700);
         setLayout(null);
         setBackground(Color.WHITE);
         IniciarComponentes();
-        setVisible(true);
+        setVisible(false);
     }
 
     private void IniciarComponentes() {
 
-        etiqueta1 = new JLabel("Ingresa Tu cuenta");
-        etiqueta1.setBounds(80,50,500,100);
+        etiqueta1 = new JLabel("Elige la Opcion");
+        etiqueta1.setBounds(80,50,600,100);
         etiqueta1.setFont(new Font("Arial", Font.BOLD, 25));
         add(etiqueta1);
 
-        barra1 = new JTextField();
-        barra1.setBounds(80, 150, 500, 50);
-        barra1.setFont((new Font("Arial", Font.BOLD, 25)));
+        barra1 = new JComboBox();
+        barra1.addItem("Nombre, Dependencia, Cargo, EPS, dias incapacidad iniio y fin, novedad incapacidad.");
+        barra1.addItem("Nombre, Dependencia, Cargo, EPS, dias vacaciones iniio y fin, novedad vacaciones.");
+        barra1.addItem("monto de bonificación y transporte que tiene cada empleado cargo y dependencia.");
+        barra1.addItem("empleados que trabajaron 20 o menos días al mes, montos de transporte y bonificación.");
+        barra1.setBounds(80, 150, 650, 50);
+        barra1.setFont((new Font("Arial", Font.BOLD, 14)));
         add(barra1);
 
-        etiqueta2 = new JLabel("Ingresa Tu contraseña");
+        etiqueta2 = new JLabel("Reporte Seleccionado:");
         etiqueta2.setBounds(80,220,500,100);
         etiqueta2.setFont(new Font("Arial", Font.BOLD, 25));
         add(etiqueta2);
 
-        barra2 = new JTextField();
-        barra2.setBounds(80, 320, 500, 50);
-        barra2.setFont((new Font("Arial", Font.BOLD, 25)));
-        add(barra2);
+        model = new DefaultTableModel();
+        model.addColumn("columnas");
+        model.addColumn("columnas");
+        tabla = new JTable(model);
+        tabla.setBounds(80, 300, 700, 350);
+        add(tabla);
 
-        boton1 = new JButton("Crear Cuenta");
-        boton1.setActionCommand("CrearCuentaNueva");
-        boton1.setBounds(80, 430, 250,80);
+
+        boton1 = new JButton("Consultar");
+        boton1.setActionCommand("Consultar");
+        boton1.setBounds(780, 130, 150,80);
         boton1.setFont((new Font("Arial", Font.BOLD, 15)));
         boton1.setBackground(Color.WHITE);
         add(boton1);
 
         boton2 = new JButton("Atras");
         boton2.setActionCommand("Principal");
-        boton2.setBounds(450, 430, 250,80);
+        boton2.setBounds(780, 220, 150,80);
         boton2.setFont((new Font("Arial", Font.BOLD, 15)));
         boton2.setBackground(Color.WHITE);
         add(boton2);
@@ -74,5 +86,4 @@ public class Ventana_Registro extends JPanel{
     public void setBoton2(JButton boton2) {
         this.boton2 = boton2;
     }
-
 }
