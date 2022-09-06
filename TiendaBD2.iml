@@ -10,13 +10,11 @@
     <orderEntry type="library" exported="" name="java" level="application" />
     <orderEntry type="module-library" exported="">
       <library>
-        <CLASSES />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/postgresql-42.2.26.jre7.jar!/" />
+        </CLASSES>
         <JAVADOC />
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/postgresql-42.5.0-jdbc-src/src/main/java" />
-          <root url="file://$MODULE_DIR$/postgresql-42.5.0-jdbc-src/src/main/version" />
-          <root url="file://$MODULE_DIR$/postgresql-42.5.0-jdbc-src/src/test/java" />
-        </SOURCES>
+        <SOURCES />
       </library>
     </orderEntry>
   </component>
