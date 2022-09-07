@@ -8,11 +8,7 @@ public class Ventana_Registro extends JPanel{
     private JLabel etiqueta1, etiqueta2, fondo;
     private JComboBox barra1;
     private JButton boton1, boton2;
-
-    private DefaultTableModel model;
-    private JTable tabla;
-
-
+    private JTextArea campo;
     public Ventana_Registro(){
         setSize(1000, 700);
         setLayout(null);
@@ -42,12 +38,9 @@ public class Ventana_Registro extends JPanel{
         etiqueta2.setFont(new Font("Arial", Font.BOLD, 25));
         add(etiqueta2);
 
-        model = new DefaultTableModel();
-        model.addColumn("columnas");
-        model.addColumn("columnas");
-        tabla = new JTable(model);
-        tabla.setBounds(80, 300, 700, 350);
-        add(tabla);
+        campo = new JTextArea();
+        campo.setBounds(80, 300, 700, 350);
+        add(campo);
 
 
         boton1 = new JButton("Consultar");

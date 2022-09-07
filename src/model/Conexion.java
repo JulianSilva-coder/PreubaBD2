@@ -20,7 +20,7 @@ public class Conexion {
 
     private void conectar() {
         try {
-            Connection conexion = DriverManager.getConnection(url, usuario, pass);
+            conexion = DriverManager.getConnection(url, usuario, pass);
             System.out.println("Conexion Exitosa");
         } catch (Exception e) {
             System.out.println(e.getMessage() + " Arreglalo");
