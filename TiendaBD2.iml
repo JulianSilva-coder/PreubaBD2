@@ -7,11 +7,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="java" level="application" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/postgresql-42.2.26.jre7.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/postgresql-42.2.26.jre7.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

@@ -20,8 +20,8 @@ public class FechaVacacionesDao {
             while (res.next()){
                 FechaVacaciones fechaVacacion = new FechaVacaciones();
                 fechaVacacion.setCodigo(res.getInt("Codigo"));
-                fechaVacacion.setInicio(res.getDate("Inicio"));
-                fechaVacacion.setFin(res.getDate("Fin"));
+                fechaVacacion.setInicio(res.getString("Inicio"));
+                fechaVacacion.setFin(res.getString("Fin"));
                 fechaVacacion.setNum_dias_vacaciones(res.getInt("Num_dias_vacaciones"));
                 fechaVacaciones.add(fechaVacacion);
             }

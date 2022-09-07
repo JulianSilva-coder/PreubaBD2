@@ -1,11 +1,13 @@
 package controller;
 
+import model.C1;
 import model.Conexion;
 import view.Ventana_Principal;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class Controller implements ActionListener {
 
@@ -16,6 +18,7 @@ public class Controller implements ActionListener {
         conexion = new Conexion();
         asignarOyentes();
     }
+
 
     private void asignarOyentes() {
         principal.getInicio().getBoton1().addActionListener(this);

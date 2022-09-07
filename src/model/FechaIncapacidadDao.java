@@ -21,8 +21,8 @@ public class FechaIncapacidadDao {
             while (res.next()){
                 FechaIncapacidad fechaIncapacidad = new FechaIncapacidad();
                 fechaIncapacidad.setCodigo(res.getInt("Codigo"));
-                fechaIncapacidad.setInicio(res.getDate("Inicio"));
-                fechaIncapacidad.setFin(res.getDate("Fin"));
+                fechaIncapacidad.setInicio(res.getString("Inicio"));
+                fechaIncapacidad.setFin(res.getString("Fin"));
                 fechaIncapacidad.setNum_dias_incapacidad_mes(res.getInt("Num_dias_incapacidad_mes"));
                 fechaIncapacidades.add(fechaIncapacidad);
             }

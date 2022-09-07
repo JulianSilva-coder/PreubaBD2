@@ -8,8 +8,8 @@ public class Conexion {
      * Conexion de PostgreSQL
      */
     private String usuario = "postgres";
-    private String pass = "141201";
-    private String url = "jdbc:postgresql://localhost:5432/Tienda";
+    private String pass = "123456";
+    private String url = "jdbc:postgresql://localhost:5432/";
     private Connection conexion = null;
     private Statement sentencia = null;
 

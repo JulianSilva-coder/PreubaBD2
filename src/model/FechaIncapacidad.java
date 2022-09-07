@@ -5,11 +5,11 @@ import java.util.Date;
 public class FechaIncapacidad {
 
     int codigo;
-    Date inicio;
-    Date fin;
+    String inicio;
+    String fin;
     int num_dias_incapacidad_mes;
 
-    public FechaIncapacidad(int codigo, Date inicio, Date fin, int num_dias_incapacidad_mes) {
+    public FechaIncapacidad(int codigo, String inicio, String fin, int num_dias_incapacidad_mes) {
         this.codigo = codigo;
         this.inicio = inicio;
         this.fin = fin;
@@ -28,19 +28,19 @@ public class FechaIncapacidad {
         this.codigo = codigo;
     }
 
-    public Date getInicio() {
+    public String getInicio() {
         return inicio;
     }
 
-    public void setInicio(Date inicio) {
+    public void setInicio(String inicio) {
         this.inicio = inicio;
     }
 
-    public Date getFin() {
+    public String getFin() {
         return fin;
     }
 
-    public void setFin(Date fin) {
+    public void setFin(String fin) {
         this.fin = fin;
     }
 
