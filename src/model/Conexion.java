@@ -14,17 +14,22 @@ public class Conexion {
     private Statement sentencia = null;
 
     public Conexion() throws Exception {
-        conectar();
-        // consultas("Select * From empleado;");
-    }
-
-    private void conectar() {
         try {
+            Class.forName("org.postgresql.Driver");
             conexion = DriverManager.getConnection(url, usuario, pass);
             System.out.println("Conexion Exitosa");
         } catch (Exception e) {
             System.out.println(e.getMessage() + " Arreglalo");
         }
+
+    }
+
+    public Connection getConnection() {
+        return conexion;
+    }
+
+    public void desconectar() {
+        conexion = null;
     }
 /**
     private ResultSet consultas(String strSQL) throws Exception {
